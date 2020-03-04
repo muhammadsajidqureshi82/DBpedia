@@ -1,0 +1,14 @@
+PREFIX dbr:<http://dbpedia.org/resource/>
+PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbo:<http://dbpedia.org/ontology/>
+PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#label>
+
+SELECT *
+WHERE
+{
+    dbr:Harvard_University  dbo:numberOfStudents   ?numberOfStudents;
+    dbo:facultySize  ?Faculty;
+    dbo:endowment  ?endowment;
+    dbo:numberOfUndergraduateStudents  ?UGStudents;
+    dbo:numberOfPostgraduateStudents  ?PGStudents.
+}

@@ -1,0 +1,18 @@
+PREFIX dbr:<http://dbpedia.org/resource/>
+PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbo:<http://dbpedia.org/ontology/>
+PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#label>
+PREFIX owl:<http://www.w3.org/2002/07/owl#>
+
+SELECT ?HEI  ?TotalStudents
+WHERE
+{
+   ?HEI      dbo:numberOfStudents  ?TotalStudents.
+  FILTER ( ?TotalStudents > 2000)
+  FILTER ( regex(?HEI,"University","i"))
+
+}
+ORDER BY  DESC(?TotalStudents)
+
+# regex() function, checks whether the variable ?HEI value has “University” as a substring, 
+# the argument “i” stands for “insensitive” showing that the query doesn’t care whether it’s in uppercase or lowercase.

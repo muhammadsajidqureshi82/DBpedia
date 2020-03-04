@@ -1,0 +1,14 @@
+PREFIX dbr:<http://dbpedia.org/resource/>
+PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbo:<http://dbpedia.org/ontology/>
+PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#label>
+
+
+dbo:dean (out) 		http://dbpedia.org/ontology/dean
+dbo:chancellor (out)	http://dbpedia.org/ontology/chancellor 
+dbo:viceChancellor (out)	http://dbpedia.org/ontology/viceChancellor
+dbo:president (out)	http://dbpedia.org/ontology/president
+dbo:head (out) 		http://dbpedia.org/ontology/head
+dbo:facultySize (out) 	http://dbpedia.org/ontology/facultySize
+dbo:staff (out)		http://dbpedia.org/ontology/staff
+dbo:team (in)		http://dbpedia.org/ontology/team

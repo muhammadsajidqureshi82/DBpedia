@@ -1,0 +1,58 @@
+PREFIX dbr:<http://dbpedia.org/resource/>
+PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbo:<http://dbpedia.org/ontology/>
+PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#label>
+PREFIX owl:<http://www.w3.org/2002/07/owl#>
+PREFIX dbp:<http://dbpedia.org/property/>
+PREFIX foaf:<http://xmlns.com/foaf/0.1/>
+
+
+SELECT COUNT(*) AS ?HEI_IC
+WHERE
+{
+
+  # --- Triples related to the Academic_Staff
+
+   { dbr:Harvard_University    dbo:president   ?o .}
+    UNION   { dbr:Harvard_University    dbo:chancellor   ?o .} 
+    UNION   { dbr:Harvard_University    dbo:viceChancellor   ?o .} 
+    UNION   { dbr:Harvard_University    dbo:dean   ?o .} 
+    UNION   { dbr:Harvard_University    dbo:head   ?o .} 
+    UNION   { dbr:Harvard_University    dbo:facultySize   ?o .} 
+    UNION   { dbr:Harvard_University    dbo:staff   ?o .} 
+    UNION   { dbr:Harvard_University    dbo:team   ?o .} 
+
+  # --- Triples related to the Academic_Affiliations
+
+    UNION   { ?s dbo:college   dbr:Harvard_University .}
+    UNION   { ?s dbo:publisher dbr:Harvard_University .}
+    UNION   { ?s dbo:affiliation dbr:Harvard_University .}
+
+  # --- Triples related to the Research_Productivity & Alumni
+                                    # Outgoing Links
+    UNION   { dbr:Harvard_University    dbo:author   ?o .}
+    UNION   { dbr:Harvard_University    dbo:field   ?o .}
+    UNION   { dbr:Harvard_University    dbo:award   ?o .}
+    UNION   { dbr:Harvard_University    dbo:designer   ?o .}
+    UNION   { dbr:Harvard_University    dbo:developer   ?o .}
+    UNION   { dbr:Harvard_University    dbo:knownFor   ?o .}
+    UNION   { dbr:Harvard_University    dbo:doctoralAdvisor   ?o .}
+    UNION   { dbr:Harvard_University    dbo:notableStudent   ?o .}
+    UNION   { dbr:Harvard_University    dbo:doctoralStudent   ?o .}
+    UNION   { dbr:Harvard_University    dbo:notableWork   ?o .}
+                                    # Incoming Links
+    UNION   { ?s dbo:foundedBy   dbr:Harvard_University .}
+    UNION   { ?s dbo:influenced   dbr:Harvard_University .}
+    UNION   { ?s dbo:almaMater   dbr:Harvard_University .}
+    UNION   { ?s dbo:education    dbr:Harvard_University .}
+    UNION   { ?s dbo:employer    dbr:Harvard_University .}
+    UNION   { ?s dbo:training       dbr:Harvard_University .}
+
+
+  # --- Triples related to the Student_Body
+
+    UNION   { dbr:Harvard_University     dbo:numberOfPostgraduateStudents   ?o .}
+    UNION   { dbr:Harvard_University     dbo:numberOfUndergraduateStudents   ?o .}
+    UNION   { dbr:Harvard_University     dbo:numberOfStudents   ?o .}
+
+}

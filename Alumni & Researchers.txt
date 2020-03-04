@@ -1,0 +1,25 @@
+PREFIX dbr:<http://dbpedia.org/resource/>
+PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbo:<http://dbpedia.org/ontology/>
+PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#label>
+
+dbo:author (out) 		http://dbpedia.org/ontology/author
+dbo:field (out)		http://dbpedia.org/ontology/field
+dbo:award (out) 		http://dbpedia.org/ontology/award
+dbo:influenced (in/out)	http://dbpedia.org/ontology/influenced
+dbo:designer (out)		http://dbpedia.org/ontology/designer
+dbo:keyPerson (in)		http://dbpedia.org/ontology/keyperson
+dbo:developer (out)	http://dbpedia.org/ontology/keyperson
+dbo:knownFor (out)	http://dbpedia.org/ontology/keyperson
+dbo:doctoralAdvisor (in/out) 	http://dbpedia.org/ontology/doctoralAdvisor 
+dbo:notableStudent (in/out)		http://dbpedia.org/ontology/notableStudent 
+dbo:doctoralStudent (in/out) 	http://dbpedia.org/ontology/doctoralStudent
+dbo:notableWork (out)		http://dbpedia.org/ontology/notableWork 
+dbo:foundedBy (in) 		http://dbpedia.org/ontology/foundedBy
+
+dbo: almamater(in)	http://dbpedia.org/ontology/almamater
+dbo: education		http://dbpedia.org/ontology/education
+dbo: employer		http://dbpedia.org/ontology/employer
+dbo: training		http://dbpedia.org/ontology/training
+dbo: occupation		http://dbpedia.org/ontology/occupation
+dbo:affiliation (in)		http://dbpedia.org/ontology/affiliation

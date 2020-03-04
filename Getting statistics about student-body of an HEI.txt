@@ -1,0 +1,8 @@
+PREFIX dbr:<http://dbpedia.org/resource/>
+PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbo:<http://dbpedia.org/ontology/>
+PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#label>
+
+dbo:Postgraduate_Education (out) 	http://dbpedia.org/ontology/numberOfPostgraduateStudents
+dbo:Undergraduate_Education(out) 	http://dbpedia.org/ontology/numberOfUndergraduateStudents
+dbo:Students (out)			http://dbpedia.org/ontology/numberOfStudents

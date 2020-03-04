@@ -1,0 +1,35 @@
+PREFIX dbr:<http://dbpedia.org/resource/>
+PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbo:<http://dbpedia.org/ontology/>
+PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#label>
+PREFIX owl:<http://www.w3.org/2002/07/owl#>
+PREFIX dbp:<http://dbpedia.org/property/>
+PREFIX foaf:<http://xmlns.com/foaf/0.1/>
+
+SELECT  (  COUNT(*)   AS    ?Harvard_University_IC   )
+WHERE
+{    
+                      # -------------------------   PIC for  dbo:president ----------------------------------------
+
+     {   dbr:Drew_Gilpin_Faust    ?p   ?o .   }   
+     UNION    
+     {   ?s   ?p     dbr:Drew_Gilpin_Faust .}
+
+   
+     UNION    # -------------------------   PIC for  dbo:college --------------------------------------------
+
+     {   dbr:Charles_Osborne   ?p   ?o .   }          UNION         {   ?s   ?p   dbr:Charles_Osborne .   }   
+     UNION  
+     {   dbr:Frank_Stranahan   ?p   ?o .   }          UNION         {   ?s   ?p   dbr:Frank_Stranahan .   }  
+     UNION
+     {   dbr:Bobby_Leo   ?p   ?o .   }                     UNION         {   ?s   ?p   dbr:Bobby_Leo .   }    
+     UNION  
+     {   dbr:Herbert_Leeds   ?p   ?o .   }              UNION         {   ?s   ?p   dbr:Herbert_Leeds .   } 
+     UNION  
+     {   dbr:Crawford_Blagden   ?p   ?o .   }       UNION         {   ?s   ?p   dbr:Crawford_Blagden .   } 
+     UNION  
+     {   dbr:bby_Jones   ?p   ?o .   }       	        UNION         {   ?s   ?p   dbr:bby_Jones .   } 
+     UNION  
+     {   dbr:Chandler_Egan   ?p   ?o .   }             UNION         {   ?s   ?p   dbr:Chandler_Egan .   } 
+
+}
